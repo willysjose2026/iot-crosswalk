@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Semaforo</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="main-tab">Semaforo</li>
+                <li class="history-tab">Historial de cruces</li>
+                <li class="statistic-tab">Estadistica</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="phone">
+            <div class="traffic-light-list">
+                <ul>
+                    <li class="traffic-light"> 
+                        <p>Semaforo 1</p>
+                        <br>
+                        <p class="traffic-light-location" id="traffic-light-location"></p>
+                        
+                    </li>
+                </ul>
+
+                <input type="button" class="stop-btn" id="crosswalk-btn" value="Cruzar Peaton" disabled>
+            </div>
+
+            <div class="traffic-light-container">
+                <div class="red active" id="red-light">
+                </div>
+                <div class="yellow" id="yellow-light"></div>
+                <div class="green" id="green-light"></div>
+            </div>
+
+            <div class="counter">
+                <p id="counter-value">Contador <br>00:00</p>
+            </div>
+        </section>
+        <section class="history-tab">
+
+        </section>
+        <section class="statistic-tab">
+
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/publisher.js"></script>
+    <script src="scripts/subscriber.js"></script>
+</body>
+</html>
